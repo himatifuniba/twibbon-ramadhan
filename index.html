@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twibbon Ramadhan 2024 - HIMATIF</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sambut bulan suci Ramadhan dengan menggunakan Twibbon Ramadhan 2024 bersama HIMATIF."
+    />
+    <meta name="author" content="Adhfry" />
+    <!-- image -->
+    <meta property="og:image" content="img/himatif-logo.png" />
+
+    <link rel="icon" href="img/himatif-logo.png" />
+    <meta name="theme-color" content="#C7C8CC" />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      span,
+      p.s {
+        font-size: 12px;
+      }
+    </style>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/fabric.min.js"></script>
+    <script src="js/filesaver.js"></script>
+    <script src="js/blob.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d2d78fd0f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="app.js"></script>
+
+    <!-- js loading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- app.js -->
+    <script>
+      document.getElementById("uploadBtn").onchange = function () {
+        document.getElementById("uploadFile").value = this.files[0].name;
+      };
+      var canvas = new fabric.Canvas("c");
+      canvas.setWidth(1024);
+      canvas.setHeight(1024);
+      // canvas.backgroundColor = 'rgba(0,0,255,0.3)';
+      canvas.setBackgroundImage(
+        "img/no-img.png",
+        canvas.renderAll.bind(canvas)
+      );
+
+      var canvasWrapper = document.getElementById("c");
+      var canvasWrapperWidth = canvasWrapper.clientWidth;
+      $(function () {
+        $(":file").change(function () {
+          if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+          }
+        });
+      });
+      fabric.Image.fromURL("img/himatifTwibbon.png", function (img) {
+        img.scaleToWidth(canvas.getWidth());
+        canvas.setOverlayImage(img, canvas.renderAll.bind(canvas));
+      });
+      function imageIsLoaded(e) {
+        fabric.Image.fromURL(e.target.result, function (img) {
+          var aspectRatio = 1024 / 1024;
+          var factor = 1024 / img.width;
+          img.set({
+            scaleX: factor,
+            scaleY: factor,
+          });
+          canvas.add(img);
+          canvas.item(0).set({
+            borderColor: "black",
+            cornerColor: "red",
+            cornerSize: 45,
+            borderScaleFactor: 10,
+            hasBorders: true,
+
+            rotatingPointOffset: 200,
+            padding: 30,
+            transparentCorners: true,
+          });
+          canvas.setActiveObject(canvas.item(0));
+          this.__canvases.push(canvas);
+          canvas.sendToBack(img);
+        });
+      }
+      $("#download").click(function () {
+        $("#c")
+          .get(0)
+          .toBlob(function (blob) {
+            saveAs(blob, "ramadhan-with-HIMATIF.png");
+          });
+      });
+      canvas.selection = false;
+      this.__canvases.push(canvas);
+      fabricCanvas.setDimensions(
+        {
+          width: "100%",
+          height: "100%",
+        },
+        {
+          cssOnly: true,
+        }
+      );
+    </script>
+
+    <!-- copyright -->
+    <script>
+      document.getElementById("copyright").innerHTML = new Date().getFullYear();
+    </script>
+
+    <!-- alert input file -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#download").bind("click", function () {
+          var imgVal = $("#uploadFile").val();
+          if (imgVal == "") {
+            swal(
+              "Masukan foto!",
+              "Tidak ada file yang dipilih! Lanjutkan Download?",
+              "error"
+            );
+            // document.getElementById("imgError").innerHTML = "Error!, Tidak ada file yang dipilih! <style="color:black;">Lanjutkan Download?</style>";
+            // document.getElementById("imgError").style.color = "red";
+            return false;
+          }
+          return false;
+        });
+      });
+    </script>
+
+    <!-- button loadng -->
+    <script>
+      $(".button").on("click", function () {
+        var $this = $(this);
+        $this.button("loading");
+        setTimeout(function () {
+          $this.button("reset");
+        }, 1000);
+      });
+    </script>
+
+    <script src="js/index.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/log.js"></script>
+  </body>
+</html>
