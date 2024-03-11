@@ -4,7 +4,7 @@ const externalHTML = `
 <main>
     <h1>Marhaban Ya Ramadhan 2024</h1>
     <p>Sambut bulan suci Ramadhan dengan menggunakan Twibbon Ramadhan 2024 Bersama HIMATIF UNIBA MADURA.</p>
-    <p>Klik Pilih file unggah foto terbaik Anda dan atur foto Anda sesuai keinginan Anda, kemudian klik Download untuk mengunduh hasil twibbon.</p>
+    <p>Tunggu twibbon muncul, lalu Klik Pilih file unggah foto terbaik Anda dan atur foto Anda sesuai keinginan Anda, kemudian klik Download untuk mengunduh hasil twibbon.</p>
     <p><canvas id="c"></canvas></p>
     <p><strong>Ramaikan bersama!</strong> Informatika UNIBA MADURA bersama HIMATIF menyala abangkuuu 🔥🔥🔥🌾</p>
     <p style="color:red;" id="imgError"></p>
