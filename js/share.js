@@ -1,8 +1,8 @@
 // share
 
 let shareData = {
-  title: "Ramadhan Kareem 2024 with HIMATIF UNIBA MADURA!",
-  text: "Menyambut Bulan Suci Ramadhan Bersama HIMATIF UNIBA MADURA, Marhaban Ya Ramadhan🙏😇",
+  title: "Idul Fitri 2024 with HIMATIF UNIBA MADURA!",
+  text: "Idul Fitri Bersama HIMATIF UNIBA MADURA, Marhaban Ya Ramadhan🙏😇",
   url: "https://himatif-twibbon.vercel.app",
 };
 

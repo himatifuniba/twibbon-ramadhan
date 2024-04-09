@@ -2,11 +2,12 @@ const main = document.getElementById("root");
 
 const externalHTML = `
 <main>
-    <h1>Marhaban Ya Ramadhan 2024</h1>
-    <p>Sambut bulan suci Ramadhan dengan menggunakan Twibbon Ramadhan 2024 Bersama HIMATIF UNIBA MADURA.</p>
-    <p>Tunggu twibbon muncul, lalu Klik Pilih file unggah foto terbaik Anda dan atur foto Anda sesuai keinginan Anda, kemudian klik Download untuk mengunduh hasil twibbon.</p>
+    <h1>Happy Eid Al-Fitr✨</h1>
+    <p>Sambut Hari Raya Idul Fitri dengan menggunakan Twibbon Hari Raya Idul Fitri Bersama HIMATIF UNIBA MADURA.</p>
+    <p>Klik Pilih file unggah foto terbaik Anda dan atur foto Anda sesuai keinginan Anda, kemudian klik Download untuk mengunduh hasil twibbon.</p>
     <p><canvas id="c"></canvas></p>
     <p><strong>Ramaikan bersama!</strong> Informatika UNIBA MADURA bersama HIMATIF menyala abangkuuu 🔥🔥🔥🌾</p>
+    <p><strong>NB: </strong> Kita memanfaatkan yang gratis agar bisa berkreatifitas dan memanfaatkan apa yang ada sesuai kebutuhan bukan gaya, contohnya web ini dihosting gratis menggunakan vercel 😉</p>
     <p style="color:red;" id="imgError"></p>
     <p>
     <input type="file" id="uploadBtn" style="display: none">
@@ -17,7 +18,7 @@ const externalHTML = `
     </p>
     <p><strong><em style="color:#38488f"><i class="fa-solid fa-share-from-square fa-beat-fade"></i> Bagikan</em></strong> Twibbon ini ke media sosial Anda.</p>
     <p class="result"></p>
-    <p class="s" style="color:gray">Sudah kami proses : <span class="log"></span> orang telah membuat twibbon Marhaban Ya Ramadhan 2024 bersama HIMATIF UNIBA MADURA.</p>
+    <p class="s" style="color:gray">Sudah kami proses : <span class="log"></span> orang telah membuat twibbon Hari Raya Idul Fitri 2024 bersama HIMATIF UNIBA MADURA.</p>
 </main>`;
 // shows the alert
 main.innerHTML = externalHTML;

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Twibbon Ramadhan 2024 - HIMATIF</title>
+    <title>Twibbon Hari Raya - HIMATIF</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Sambut bulan suci Ramadhan dengan menggunakan Twibbon Ramadhan 2024 bersama HIMATIF."
+      content="Sambut Hari Raya Idul Fitri dengan menggunakan Twibbon bersama HIMATIF."
     />
     <meta name="author" content="Adhfry" />
     <!-- image -->
@@ -73,7 +73,7 @@
           }
         });
       });
-      fabric.Image.fromURL("img/himatifTwibbon.png", function (img) {
+      fabric.Image.fromURL("img/tellasan.png", function (img) {
         img.scaleToWidth(canvas.getWidth());
         canvas.setOverlayImage(img, canvas.renderAll.bind(canvas));
       });
@@ -106,7 +106,7 @@
         $("#c")
           .get(0)
           .toBlob(function (blob) {
-            saveAs(blob, "ramadhan-with-HIMATIF.png");
+            saveAs(blob, "Happy-Eid-Al-Fitr-with-HIMATIF.png");
           });
       });
       canvas.selection = false;
