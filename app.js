@@ -7,7 +7,7 @@ const externalHTML = `
     <p>Klik Pilih file unggah foto terbaik Anda dan atur foto Anda sesuai keinginan Anda, kemudian klik Download untuk mengunduh hasil twibbon.</p>
     <p><canvas id="c"></canvas></p>
     <p><strong>Ramaikan bersama!</strong> Informatika UNIBA MADURA bersama HIMATIF menyala abangkuuu 🔥🔥🔥🌾</p>
-    <p><strong>NB: </strong> Kita memanfaatkan yang gratis agar bisa berkreatifitas dan memanfaatkan apa yang ada sesuai kebutuhan bukan gaya, contohnya web ini dihosting gratis menggunakan vercel 😉</p>
+    <p><strong>NB: </strong>Kita memanfaatkan yang gratis agar bisa berkreatifitas dan memanfaatkan apa yang ada sesuai kebutuhan bukan gaya, contohnya web ini dihosting gratis menggunakan vercel 😉</p>
     <p style="color:red;" id="imgError"></p>
     <p>
     <input type="file" id="uploadBtn" style="display: none">
